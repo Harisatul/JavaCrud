@@ -1,5 +1,7 @@
 package latihan.Entitity;
 
+import java.util.Objects;
+
 public class Library {
 
     private String titleName;
@@ -55,5 +57,18 @@ public class Library {
                 ", author='" + author + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return year == library.year && titleName.equals(library.titleName) && publsiher.equals(library.publsiher) && author.equals(library.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(titleName, publsiher, author, year);
     }
 }

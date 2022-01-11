@@ -8,8 +8,13 @@ public interface LibraryRepository {
 
     void add(Library library);
 
-    void remove();
+    boolean remove(String name);
 
     List <Library> find();
+
+    Library isExist(String name);
+
+    boolean update(String name, String newName,  String newPublisher, String newAuthor, int newYear);
+
 
 }

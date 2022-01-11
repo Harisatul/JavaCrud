@@ -17,7 +17,7 @@ public class View {
     public void showLibary(){
         label:
         while (true) {
-            System.out.println("\nDAFTAR MAHASISWA");
+            System.out.println("\nDAFTAR BUKU");
             service.show();
 
             System.out.println("== MENU");
@@ -29,13 +29,13 @@ public class View {
                     addLibary();
                     break;
                 case "2":
-//                    removeMahasiswa();
+                    removeLibrary();
                     break;
                 case "3":
-//                    searchMahasiswa();
+                    searchLibrary();
                     break;
                 case "4":
-//                    updateMahasiswa();
+                    updateLibrary();
                     break;
                 case "x":
                     break label;
@@ -61,8 +61,38 @@ public class View {
         System.out.print("Masukkan tahun rilis : " );
         int year = s.nextInt();
         service.addLibrary(name,publisher,author,year);
+    }
 
+    public void removeLibrary(){
+        System.out.print("Masukkan judul buku yang dihapus : ");
+        String name = s.nextLine();
+        service.removeLibrary(name);
 
+    }
+
+    public void searchLibrary(){
+        System.out.print("Masukkan judul buku yang di ingin dicari : ");
+        String name = s.nextLine();
+        service.isExist(name);
+
+    }
+
+    public  void updateLibrary(){
+        System.out.print("Masukkan judul buku yang ingin di ubah : ");
+        String name = s.nextLine();
+
+        System.out.print("Masukkan judul buku baru : ");
+        String newName = s.nextLine();
+
+        System.out.print("Masukkan publisher baru : ");
+        String newPublisher = s.nextLine();
+
+        System.out.print("Masukkan author baru : ");
+        String newAuthor = s.nextLine();
+
+        System.out.print("Masukkan tahun rilis baru : " );
+        int newYear = s.nextInt();
+        service.update(name, newName, newPublisher,newAuthor, newYear );
 
     }
 }

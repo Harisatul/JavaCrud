@@ -15,7 +15,33 @@ library console app to store book data. implements simple crud and clean code pr
 
 ![](markdown/img.png)
 
-this is main menu. there are five sub-menu to be chosen.
-input the number that you want to choose.
+This is main menu. There are five sub-menu to be chosen.
+Input the number that you want to choose.
 
 ## Add Book
+
+![](markdown/img1.png)
+
+There are four fields that should be filled.
+    - `title` Book title should be String.
+    - `publisher` Book publisher should be String.
+    - `author` Book author should be String.
+    - `year` Book year should be the number.
+
+Make sure you type it correctly. Otherwise, you'll meet `invalid-message` .
+
+![img.png](markdown/img3.png)
+
+Type it again with right input. Then, program will be happy.
+
+![img.png](markdown/img4.png)
+
+Finally, Book has been added. The program will give you `success-message`
+
+## View Book
+
+
+
+
+
+

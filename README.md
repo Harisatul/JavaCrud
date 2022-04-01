@@ -23,10 +23,10 @@ Input the number that you want to choose.
 ![](markdown/img1.png)
 
 There are four fields that should be filled.
-    - `title` Book title should be String.
-    - `publisher` Book publisher should be String.
-    - `author` Book author should be String.
-    - `year` Book year should be the number.
+- `title` Book title should be String.
+- `publisher` Book publisher should be String.
+- `author` Book author should be String.
+- `year` Book year should be the number.
 
 Make sure you type it correctly. Otherwise, you'll meet `invalid-message` .
 

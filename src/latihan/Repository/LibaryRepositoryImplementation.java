@@ -45,7 +45,7 @@ public class LibaryRepositoryImplementation implements LibraryRepository {
 
     public Library isExist (String name) {
         for (var i = 0 ; i < store.size(); i++){
-            if (store.get(i).getTitleName().equals(name)){
+            if (store.get(i).getTitleName().equalsIgnoreCase(name)){
                 return store.get(i);
             }
         }
